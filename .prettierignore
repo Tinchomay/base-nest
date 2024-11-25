@@ -1,0 +1,4 @@
+# Ignorar todos los archivos JavaScript
+*.ts
+# Ignorar la carpeta src
+src/
