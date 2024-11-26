@@ -33,6 +33,6 @@ import { JwtStrategy } from './strategies/jwt.srategy';
     }),
     ConfigModule
 ],
-  exports: [TypeOrmModule, JwtStrategy, PassportModule, JwtModule]
+  exports: [TypeOrmModule, JwtStrategy, PassportModule, JwtModule, AuthService]
 })
 export class AuthModule {}

@@ -4,7 +4,9 @@ import { Auth } from 'src/auth/decorator/auth.decorator';
 import { ValidRoles } from 'src/auth/interfaces/valid-roles';
 import { GetUser } from 'src/auth/decorator/get-user.decorator';
 import { User } from 'src/auth/entities/user.entity';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Semilla')
 @Controller('seed')
 export class SeedController {
   constructor(private readonly seedService: SeedService) {}

@@ -7,7 +7,10 @@ import { Auth } from 'src/auth/decorator/auth.decorator';
 import { ValidRoles } from 'src/auth/interfaces/valid-roles';
 import { GetUser } from 'src/auth/decorator/get-user.decorator';
 import { User } from 'src/auth/entities/user.entity';
+import { ApiResponse, ApiTags } from '@nestjs/swagger';
+import { Product } from './entities/product.entity';
 
+@ApiTags('Productos')
 @Controller('products')
 //como aqui no le estamos pasando roles solo valida que este autenticado
 // @Auth()
@@ -16,6 +19,9 @@ export class ProductsController {
 
   @Post()
   @Auth( ValidRoles.user )
+  @ApiResponse({ status : 201, description: 'Product was created', type: Product})
+  @ApiResponse({ status : 400, description: 'Bad request'})
+  @ApiResponse({ status : 403, description: 'Forbidden, Token related'})
   create(
     @Body() createProductDto: CreateProductDto,
     @GetUser() user: User,
