@@ -21,6 +21,6 @@
       "DB_USERNAME": "neondb_owner", 
       "JWT_SECRET": "ff51c8a0300f236d63a50a5bcd0d69bfd4f93ea3f10d8c145ac3f346194e2926",
       "HOST_API": "https://04-teslo-shop-chi.vercel.app/",
-      "STAGE": "prod"
+      "STAGE": "dev"
     }
 }
