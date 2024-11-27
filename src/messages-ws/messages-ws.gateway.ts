@@ -9,7 +9,7 @@ import { Repository } from 'typeorm';
 import { JwtPayload } from 'src/auth/interfaces/jwt-payload.interface';
 
 //Este es el decorador para ws
-@WebSocketGateway({ cors: true, namespace: 'mensajes' })
+@WebSocketGateway({ cors: true})
 //Para reaccionar a las conexiones y desconexiones tenemos que implementar estos metodos
 export class MessagesWsGateway implements OnGatewayConnection, OnGatewayDisconnect {
 

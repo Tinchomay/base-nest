@@ -11,5 +11,16 @@
         "src": "/(.*)",
         "dest": "dist/main.js"
       }
-    ]
-  }
+    ],
+    "env": { 
+      "PORT": "3000", 
+      "DB_PASSWORD": "czpA0tSR3TKi", 
+      "DB_NAME": "neondb", 
+      "DB_HOST": "ep-plain-sun-a6cng328.us-west-2.aws.neon.tech", 
+      "DB_PORT": "5432", 
+      "DB_USERNAME": "neondb_owner", 
+      "JWT_SECRET": "ff51c8a0300f236d63a50a5bcd0d69bfd4f93ea3f10d8c145ac3f346194e2926",
+      "HOST_API": "https://04-teslo-shop-chi.vercel.app/",
+      "STAGE": "prod"
+    }
+}

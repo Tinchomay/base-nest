@@ -13,7 +13,7 @@ async function bootstrap() {
       forbidNonWhitelisted: true,
     })
   );
-
+  app.enableCors();
   //lo agregamos antes del listen
   const config = new DocumentBuilder()
     //titulo
